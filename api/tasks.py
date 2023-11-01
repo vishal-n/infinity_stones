@@ -13,7 +13,6 @@ def activate_stone(user_id, stone_id, power_duration):
     # Perform the stone activation task
     sleep(power_duration)
 
-    # Update the Activation model or perform other relevant logic to mark the activation as complete
     activation = Activation(user_id=user_id, stone_id=stone_id, start_time=start_time, end_time=end_time)
     activation.save()
 
